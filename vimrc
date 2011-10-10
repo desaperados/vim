@@ -37,6 +37,9 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
+" Quickly add a blank line without entering insert mode
+nnoremap + maO<esc>`a
+
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit

@@ -10,6 +10,8 @@ set lines=25 columns=100          " Window dimensions.
 set guioptions=                   " Don't show any scrollbars
 set visualbell                    " Don't beep
 
+set statusline+=%{rvm#statusline()} 
+
 if has("gui_macvim")
   
   macmenu &File.New\ Tab key=<nop>  " PeepOpen with Command-T

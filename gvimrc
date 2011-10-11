@@ -1,7 +1,7 @@
 "colorscheme solarized            " Colours"
 colorscheme ir_black
 set background=dark               " Background"
-set guifont=Inconsolata:h20       " Font family and font size.
+"set guifont=Inconsolata:h20       " Font family and font size.
 set antialias                     " MacVim: smooth fonts.
 set encoding=utf-8                " Use UTF-8 everywhere.
 set guioptions-=T                 " Start without the toolbar
@@ -13,9 +13,9 @@ set visualbell                    " Don't beep
 set statusline+=%{rvm#statusline()} 
 
 if has("gui_macvim")
-  
-  macmenu &File.New\ Tab key=<nop>  " PeepOpen with Command-T
-  map <D-t> <Plug>PeepOpen
+
+  " Easy Cycling through listed buffers
+  nnoremap <Tab> :bnext<CR>
 
   map <D-F> :Ack<space>             " Command-Shift-F for Ack
   

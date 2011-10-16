@@ -1,6 +1,6 @@
-"colorscheme solarized            " Colours"
-colorscheme ir_black
-set background=dark               " Background"
+" colorscheme solarized            " Colours"
+" colorscheme ir_black
+" set background=dark               " Background"
 "set guifont=Inconsolata:h20       " Font family and font size.
 set antialias                     " MacVim: smooth fonts.
 set encoding=utf-8                " Use UTF-8 everywhere.

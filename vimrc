@@ -37,6 +37,8 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
+color github
+
 " Quickly add a blank line without entering insert mode
 nnoremap + maO<esc>`a
 
@@ -55,6 +57,8 @@ map <leader>tm :tabmove
 "set tabstop=2                    " Global tab width.
 "set shiftwidth=2                 " And again, related.
 "set expandtab                    " Use spaces instead of tabs
+
+:set syntax=ruby   ai et ts=2 sw=2 tw=0
 
 set laststatus=2                  " Show the status line all the time
 

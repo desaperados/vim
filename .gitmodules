@@ -39,4 +39,4 @@
 	url = git://github.com/airblade/vim-rooter.git
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
-	url = git://github.com/airblade/vim-rooter.git
+	url = git://github.com/mileszs/ack.vim.git

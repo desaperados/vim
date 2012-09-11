@@ -7,7 +7,7 @@ set encoding=utf-8                " Use UTF-8 everywhere.
 set guioptions-=T                 " Start without the toolbar
 set lines=25 columns=100          " Window dimensions.
 "set guioptions-=r                " Don't show right scrollbar
-set guioptions=                   " Don't show any scrollbars
+"set guioptions=                   " Don't show any scrollbars
 set visualbell                    " Don't beep
 
 set statusline+=%{rvm#statusline()} 
@@ -15,7 +15,7 @@ set statusline+=%{rvm#statusline()}
 if has("gui_macvim")
 
   " Easy Cycling through listed buffers
-  nnoremap <Tab> :bnext<CR>
+  " nnoremap <Tab> :bnext<CR>
 
   map <D-F> :Ack<space>             " Command-Shift-F for Ack
   

@@ -7,6 +7,19 @@ filetype plugin indent on         " Turn on file type detection.
 
 " runtime macros/matchit.vim        " Load the matchit plugin.
 
+" ensure that you will have only one buffer ever in current window
+" autocmd BufEnter * setlocal bufhidden=delete 
+
+" :RDocPreview
+command! -nargs=0 RDocPreview call RDocRenderBufferToPreview()
+function! RDocRenderBufferToPreview()
+  let rdocoutput = "/tmp/vimrdoc/"
+  call system("rdoc " . bufname("%") . " --op " . rdocoutput)
+  call system("open -a 'Google Chrome' ". rdocoutput . "index.html")
+endfunction
+
+set nowrap
+
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
 
@@ -35,7 +48,9 @@ set visualbell                    " No beeping.
 
 set nobackup                      " Don't make a backup before overwriting a file.
 set nowritebackup                 " And again.
-set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
+
+" Disabled. Conflicts with vim-fugitive
+"set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
 color github
 

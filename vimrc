@@ -52,6 +52,16 @@ set nowritebackup                 " And again.
 " Disabled. Conflicts with vim-fugitive
 "set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
+set tabstop=2                    " Global tab width.
+set shiftwidth=2                 " And again, related.
+set expandtab                    " Use spaces instead of tabs
+"
+" Strip trailng whitespace on save
+autocmd FileType ruby,html,css autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" turn on omnicompletion
+set ofu=syntaxcomplete#Complete
+
 color github
 
 " Quickly add a blank line without entering insert mode
@@ -68,10 +78,6 @@ map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
-" UNCOMMENT TO USE
-"set tabstop=2                    " Global tab width.
-"set shiftwidth=2                 " And again, related.
-"set expandtab                    " Use spaces instead of tabs
 
 :set syntax=ruby   ai et ts=2 sw=2 tw=0
 
